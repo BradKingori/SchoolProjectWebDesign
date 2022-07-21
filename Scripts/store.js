@@ -29,7 +29,7 @@ function ready(){
 	
 	document.getElementsByClassName('button-purchase').addEventListener('click',purchaseClicked)
 		
-	}
+	
 }
 function purchaseClicked(event){
 	alert("Thank you for your purchase")
