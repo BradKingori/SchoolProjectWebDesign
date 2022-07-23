@@ -31,6 +31,76 @@ font-size: 40px;
   transform: scale(6.5); /*650% zoom  */
 }
 	
+	 /* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+	
 </style>
 <script src="Scripts/store.js" async>
 	
@@ -40,41 +110,37 @@ font-size: 40px;
 </head>
 
 <body class="lunchmenu">
-	<center>
 <table width="80%" border="1" cellspacing="12" cellpadding="12">
   <tbody>
-	<tr colspan="2">
-    	<th colspan= "5">HOME
-
-		<div class="hg">	
-		</div>
-		</th>
-    </tr>
-	    
-   	<tr>
     
 <th colspan= "5" scope="col"><label for="menu_options"></label>
  <center> 
-			  <select name="menu_options" id="menu_option">
-				<option value="Menu">Menu</option>
-				<option value="Lunch">Lunch</option>
-				<option value="Wines">Wines</option>
-				<option value="Desert">Desert</option>
-				<option value="CheckOut">CheckOut</option>
-			  </select>
+ <div class="navbar">
+  <a href="#home">Home</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Menu
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Lunch</a>
+      <a href="#">Dinner</a>
+      <a href="#">Desert</a>
+    </div>
+  </div>
+	 <a href="#news">Reservations</a>
+	 <a href="#news">About Us</a>
+	 <a href="#news">Contact Us</a>
+</div> 	 
+		
+		
 	
-			 
-		
-		
-		
-		
-	</center>
 		
 		</th>
     </tr>
    	<tr>
     <th scope="col"><img src="images/c38bc7b801063c0469874c11f8d27ff1.jpg" width="736" height="500" alt=""/></th>
-	<th colspan="4" scope="col">Titans Room<br>	   Filled with a wide array of wines to choose from dating as far back as the 19th Century&nbsp; .The TitansRoom also boasts a large mural by Pablo picasso's Night sky .It is Ondiek's largest private room, suited for parties of up to 30 guests and requires a minimum of 10 guests</th>
+	<th colspan="4" scope="col">Titans Room<br> 	   Filled with a wide array of wines to choose from dating as far back as the 19th Century&nbsp; .The TitansRoom also boasts a large mural by Pablo picasso's Night sky .It is The Atlas' largest private room, suited for parties of up to 30 guests and requires a minimum of 10 guests</th>
     </tr>
 	     	<tr>
     <th scope="col">Independence Room<br>       This room features japanese memorabilia, including the program the Kenyan emarald lilacs painted to honor kenya's 10 years of Independence.&nbsp; &nbsp; Kenyan hunting paintings and political cartoons also line the walls. The&nbsp;Independence &nbsp;Room is suited for parties of up to 25&nbsp; guests and requires a minimum of 10 guests.</th>
@@ -396,8 +462,10 @@ font-size: 40px;
 	  </tr>
 	  
 	  <tr >
-      <th colspan= "5" scope="row">ABOUT US</th>
-      	  </tr>
+      <th
+		  
+		  colspan= "5" scope="row">ABOUT US</th>
+      </tr>
   </tbody>
 </table>
 </center>
