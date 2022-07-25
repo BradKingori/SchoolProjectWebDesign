@@ -16,13 +16,39 @@
 
 </head>
 <body>
-	<center> <a href="index.html"><img src="images/the atlas.jpg" width="1248" height="280" alt=""/></a></center>
- <div class="navbar">
-	 <a href="index.html">Menu</a>
-	 <a href="reservation.html">Reservations</a>
-	 <a href="about.html">About Us</a>
-	 <a href="Contactusgroup.html">Contact Us</a>
-</div> 	
+	<center> <a href="index.html"><img src="images/the atlas.jpg" width="180" height="120" alt=""/></a></center>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      background-color:darksalmon;
+    }
+    </style>
+    
+    <ul>
+      <li><a class="active" href="index.html">Menu</a></li>
+      <li><a href="reservation.html">Reservations</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="Contactusgroup.html">Contact us</a></li>
+    </ul>
     <!--Caroussel-->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
         <div class="carousel-indicators">
@@ -60,9 +86,12 @@
         </div>
       </div>
 
-    <!--Form-->
+
+
+<form  action="https://formspree.io/f/bjnzivu@gmail.com"
+method="POST">
     <div class="row g-3">
-        <div class="col-sm-7">
+        <div class="col-sm">
           <input type="text" class="form-control" placeholder="Name" aria-label="City">
         </div>
         <div class="col-sm">
@@ -71,7 +100,33 @@
         <div class="col-sm">
           <input type="time" class="form-control" placeholder="Time" aria-label="Zip">
         </div>
+        <div class="col-sm">
+          <label for="cars">Choose a room:</label>
+
+<select name="room" id="room">
+  <option value="Titans">Titans room</option>
+  <option value="Independence">Independence room</option>
+  <option value="Eternal">Eternal room</option>
+</select>
+        </div>
       </div>
-    
+      <style>
+        
+        button{
+          background-color: black; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin-top: 1%;
+        }
+      </style>
+        <center><button type="submit">Send</button></center>
+      
+
+    </form>   
 </body>
 </html>
